@@ -1,0 +1,6 @@
+{
+  "name": "Kartu Ucapan Ulang Tahun Romantis",
+  "description": "Halaman ucapan ulang tahun romantis dengan font kaligrafi Great Vibes, kelopak mawar dan bintang jatuh, teks yang dapat diedit langsung, serta fitur simpan HTML dan cetak.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

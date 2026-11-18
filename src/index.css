@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-calligraphy: 'Great Vibes', cursive;
+    --font-serif-body: 'Cormorant Garamond', Georgia, serif;
+    --font-ui: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  html,
+  body {
+    min-height: 100%;
+    margin: 0;
+    color: #ffffff;
+    font-family: var(--font-serif-body);
+    background: linear-gradient(145deg, #be185d 0%, #9d174d 28%, #701a75 64%, #3b0764 100%);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.font-calligraphy {
+  font-family: var(--font-calligraphy);
+}
+
+.font-serif-body {
+  font-family: var(--font-serif-body);
+}
+
+.font-ui {
+  font-family: var(--font-ui);
+}
+
+.romantic-backdrop {
+  background:
+    radial-gradient(circle at 18% 20%, rgba(251, 113, 133, 0.34) 0%, transparent 48%),
+    radial-gradient(circle at 82% 80%, rgba(168, 85, 247, 0.32) 0%, transparent 52%),
+    linear-gradient(145deg, #be185d 0%, #9d174d 28%, #701a75 64%, #3b0764 100%);
+}
+
+/* Editable text affordance: subtle hover/focus cue without breaking elegance */
+.editable-block {
+  border-radius: 0.5rem;
+  transition: background-color 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.editable-block:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.editable-block:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    color: #2b1328 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-card {
+    background: #ffffff !important;
+    color: #2b1328 !important;
+    border: 1px solid #d6b4c7 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+  }
+
+  .print-card * {
+    color: #2b1328 !important;
+    text-shadow: none !important;
+  }
+
+  .print-card figure {
+    transform: none !important;
+    box-shadow: none !important;
+    border: 1px solid #e6ceda !important;
+    break-inside: avoid;
+  }
+}
